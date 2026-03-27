@@ -1,0 +1,356 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Developer Portfolio</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<script defer src="{% static 'js/scroll.js' %}"></script>
+<script defer src="{% static 'js/typing.js' %}"></script>
+<script defer src="{% static 'js/video-background.js' %}"></script>
+<script defer src="{% static 'js/simple-particles.js' %}"></script>
+<script defer src="{% static 'js/surprise.js' %}"></script>
+
+</head>
+
+<body class="bg-black text-white overflow-x-hidden">
+
+<!-- PARALLAX BACKGROUND LAYERS -->
+<div class="parallax-layer parallax-bg-1"></div>
+<div class="parallax-layer parallax-bg-2"></div>
+<div class="parallax-layer parallax-bg-3"></div>
+
+<!-- FLOATING ELEMENTS -->
+<div class="floating-element floating-1"></div>
+<div class="floating-element floating-2"></div>
+<div class="floating-element floating-3"></div>
+
+<!-- ABSTRACT GEOMETRIC SHAPES -->
+<div class="abstract-shape shape-1"></div>
+<div class="abstract-shape shape-2"></div>
+<div class="abstract-shape shape-3"></div>
+<div class="abstract-shape shape-4"></div>
+<div class="abstract-shape shape-5"></div>
+<div class="abstract-shape shape-6"></div>
+
+<!-- MORPHING BLOBS -->
+<div class="blob blob-1"></div>
+<div class="blob blob-2"></div>
+<div class="blob blob-3"></div>
+
+<!-- ABSTRACT PATTERNS -->
+<div class="abstract-pattern pattern-1"></div>
+<div class="abstract-pattern pattern-2"></div>
+<div class="abstract-pattern pattern-3"></div>
+
+<!-- VIDEO BACKGROUND -->
+<video class="video-background" autoplay muted loop playsinline>
+    <source src="{% static 'videos/bg.mp4' %}" type="video/mp4">
+</video>
+
+<!-- BACKGROUND PARTICLES -->
+
+<canvas id="particles"></canvas>
+
+<!-- NAVBAR -->
+
+<nav class="nav-glass">
+
+<div class="container">
+
+<h1 class="logo">DEV<span>PORT</span></h1>
+
+<ul class="nav-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section id="home" class="hero">
+
+<div class="hero-container">
+
+<div class="profile-placeholder">
+    <img src="{% static 'images/profile.jpg' %}" alt="Profile" class="profile-image">
+</div>
+
+<h1 class="hero-title">
+Hi I'm <span class="gradient">Reynan Janne Alnic R. Manilingan</span>
+</h1>
+
+<h2 class="typing"></h2>
+
+<p class="hero-desc">
+Building intelligent systems, web apps, and AI powered solutions.
+</p>
+
+<a href="#projects" class="btn-glow">View Projects</a>
+
+</div>
+
+<!-- HIDDEN EASTER EGG -->
+<div class="easter-egg" id="easterEgg">
+<span class="click-hint">🚀 Click me!</span>
+</div>
+
+</section>
+
+<!-- ABOUT ME SECTION -->
+
+<section id="about" class="section">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about-container">
+
+<p>
+   I am a student learning Django and Python 
+</p>
+
+
+</div>
+
+</section>
+
+<!-- SKILLS SECTION -->
+
+<section id="skills" class="section">
+
+<h2 class="section-title">Tech Stack</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<h3>Python</h3>
+<div class="bar"><span style="width:95%"></span></div>
+</div>
+
+<div class="skill-card">
+<h3>Django</h3>
+<div class="bar"><span style="width:90%"></span></div>
+</div>
+
+<div class="skill-card">
+<h3>PostgreSQL</h3>
+<div class="bar"><span style="width:85%"></span></div>
+</div>
+
+<div class="skill-card">
+<h3>JavaScript</h3>
+<div class="bar"><span style="width:80%"></span></div>
+</div>
+
+</div>
+
+</section>
+
+<!-- EDUCATION SECTION -->
+
+<section id="education" class="section">
+
+<h2 class="section-title">Education</h2>
+
+<div class="education-grid">
+
+<div class="education-card">
+
+<div class="education-header">
+
+<h3>Negros Oriental State University</h3>
+
+<span class="education-date">2023 - Present</span>
+
+</div>
+
+<div class="education-body">
+
+<p class="institution">Bachelor of Science in Information Technology</p>
+
+<p class="description">
+Focused on software engineering, machine learning, and web development.
+Graduated with honors, specializing in full-stack development and AI systems.
+</p>
+
+</div>
+
+</div>
+
+<div class="education-card">
+
+<div class="education-header">
+
+<h3>Bilbao Uybico National High School</h3>
+
+<span class="education-date">2019 - 2023</span>
+
+</div>
+
+<div class="education-body">
+
+<p class="institution">Information Technology</p>
+
+<p class="description">
+Autocad design and technical drafting
+</p>
+
+</div>
+
+</div>
+
+<div class="education-card">
+
+<div class="education-header">
+
+<h3>AI & Machine Learning Certification</h3>
+
+<span class="education-date">2024</span>
+
+</div>
+
+<div class="education-body">
+
+<p class="institution">AI Institute</p>
+
+<p class="description">
+Advanced certification in machine learning, deep learning, and
+natural language processing with Python.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS SECTION -->
+
+<section id="projects" class="section">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+
+<h3>Hotel Management System</h3>
+
+<p>
+Full Django hotel reservation system with payment integration.
+</p>
+
+</div>
+
+<div class="project-card">
+
+<h3>Identity Recognition System</h3>
+
+<p>
+AI face recognition system using Python and OpenCV.
+</p>
+
+</div>
+
+<div class="project-card">
+
+<h3>AI Portfolio Assistant</h3>
+
+<p>
+AI chatbot that answers questions about my projects.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section id="contact" class="section">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact-box">
+<p><a href="mailto:reynan23451@email.com">📧 Email: reynan23451@email.com</a></p>
+<p><a href="https://github.com/reynan23451" target="_blank">💻 GitHub: reynan23451</a></p>
+<p><a href="https://www.facebook.com/reynan.janne.alnic.manilingan" target="_blank">📘 Facebook: Reynan Janne Alnic Manilingan</a></p>
+</div>
+
+</section>
+
+<!-- SURPRISE GAME OVERLAY -->
+<div class="surprise-overlay" id="surpriseOverlay">
+<div class="screen-split left-split"></div>
+<div class="screen-split right-split"></div>
+</div>
+
+<!-- ROCKET ANIMATION -->
+<div class="rocket-container" id="rocketContainer">
+<div class="rocket" id="rocket">
+🚀
+</div>
+<div class="rocket-flame"></div>
+</div>
+
+<!-- WELCOME SCREEN -->
+<div class="welcome-screen" id="welcomeScreen">
+<div class="welcome-content">
+<div class="anime-character-container">
+<!-- Anime Girl Dancing from CDN -->
+<div class="anime-dancing">
+<iframe src="https://i.gifer.com/cp.gif" width="245" height="200" frameBorder="0" allowFullScreen></iframe>
+</div>
+<div class="character-overlay">
+<div class="character-body">
+<div class="character-head">
+<div class="eyes">
+<div class="eye left-eye"></div>
+<div class="eye right-eye"></div>
+</div>
+<div class="mouth"></div>
+</div>
+<div class="character-body-main"></div>
+<div class="arms">
+<div class="arm left-arm"></div>
+<div class="arm right-arm"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="welcome-message">
+<h2 class="welcome-title">🌟 Welcome! 🌟</h2>
+<p class="welcome-text">Hi there! I'm your friendly AI assistant!</p>
+<p class="welcome-subtext">Thanks for finding my secret spot! 🎉</p>
+<p class="dance-text">Let's dance together! 💃</p>
+<button class="welcome-btn" id="welcomeBtn">Let's Explore!</button>
+</div>
+</div>
+<div class="welcome-particles">
+<div class="welcome-particle"></div>
+<div class="welcome-particle"></div>
+<div class="welcome-particle"></div>
+<div class="welcome-particle"></div>
+<div class="welcome-particle"></div>
+</div>
+</div>
